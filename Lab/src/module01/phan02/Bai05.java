@@ -1,4 +1,4 @@
-package phan02;
+package module01.phan02;
 
 //Toan tu quan he, toan tu so sanh
 public class Bai05 {

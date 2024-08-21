@@ -1,4 +1,4 @@
-package phan02;
+package module01.phan02;
 
 //Toan Tu 1 ngoi
 public class Bai03 {

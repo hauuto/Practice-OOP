@@ -1,4 +1,4 @@
-package phan01;
+package module01.phan01;
 
 public class Bai01 {
     public static void main(String[] args) {

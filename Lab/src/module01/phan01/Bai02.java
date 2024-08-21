@@ -1,4 +1,4 @@
-package phan01;
+package module01.phan01;
 
 import java.util.Scanner;
 

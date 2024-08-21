@@ -1,4 +1,4 @@
-package phan03;
+package module01.phan03;
 
 //If else, switch case
 public class Bai01 {
