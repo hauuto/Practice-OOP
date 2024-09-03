@@ -8,7 +8,10 @@
 package bai02;
 
 /**
- * @description:
+ * @description: This class is used to manage information of a point
+ * This class is inherited from bai01.Point
+ * This class will add some methods to calculate the distance from O(0,0) to the point and negate the point
+ * This class will override the toString method to display the information of the point
  * @author: To Thanh Hau
  * @version: 1.0
  * @created: 9/3/2024 10:49 PM

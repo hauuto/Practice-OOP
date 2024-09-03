@@ -8,7 +8,7 @@
 package bai02;
 
 /**
- * @description:
+ * @description: This class will test the Point class
  * @author: To Thanh Hau
  * @version: 1.0
  * @created: 9/3/2024 11:20 PM
