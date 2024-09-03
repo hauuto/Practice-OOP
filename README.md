@@ -1,10 +1,10 @@
 # Practical-OOP
 A place to save code learn from OOP Course (IUH)
 
-#### Number: 11
-#### Student ID: 23660471
-#### Student name: Tô Thanh Hậu
-#### Lecturer: ThS. Nguyễn Thị Hoàng Khánh
+**Number:** *11*
+**Student ID:** *23660471*
+**Student name:** *Tô Thanh Hậu*
+**Lecturer:** *ThS. Nguyễn Thị Hoàng Khánh*
 
 
 
