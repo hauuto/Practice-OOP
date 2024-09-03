@@ -2,3 +2,7 @@
 *.zip
 *.rar
 *.exe
+
+#ignore dir
+/LT1
+/LT2
