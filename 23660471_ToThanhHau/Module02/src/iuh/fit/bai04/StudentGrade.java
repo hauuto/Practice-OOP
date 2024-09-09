@@ -5,7 +5,7 @@
  */
 
 
-package bai04;
+package iuh.fit.bai04;
 
 /**
  * @description: This class is used to manage information of a student grade

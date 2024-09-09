@@ -5,7 +5,7 @@
  */
 
 
-package bai04;
+package iuh.fit.bai04;
 
 import java.util.Scanner;
 

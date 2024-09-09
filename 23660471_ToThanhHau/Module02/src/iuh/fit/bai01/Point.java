@@ -5,7 +5,7 @@
  */
 
 
-package bai01;
+package iuh.fit.bai01;
 
 /**
  * @description: This class is used to manage information of a point
