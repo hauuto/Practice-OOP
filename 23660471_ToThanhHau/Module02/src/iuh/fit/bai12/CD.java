@@ -18,7 +18,7 @@ public class CD {
     private String tuaCD;
     private int soBaiHat;
     private double giaThanh;
-
+    
 
     //Constructors
     public CD(){
@@ -75,5 +75,11 @@ public class CD {
             throw new IllegalArgumentException("Giá thành phải lớn hơn 0");
         }
         this.giaThanh = giaThanh;
+    }
+
+
+    @Override
+    public String toString(){
+        return String.format("%-15d%-30s%15d%30.2f",maCD,tuaCD,soBaiHat,giaThanh);
     }
 }
