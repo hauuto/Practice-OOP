@@ -2,7 +2,7 @@ package module02.Bai01;
 
 import java.util.Scanner;
 
-public class testToaDo {
+public class TestToaDo {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -16,6 +16,6 @@ public class testToaDo {
         System.out.println("Enter Y: ");
         double y = sc.nextDouble();
         toaDo.setY(y);
-        System.out.println(toaDo.getThongTin());
+        System.out.println(toaDo);
     }
 }

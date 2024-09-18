@@ -53,4 +53,9 @@ public class ToaDo {
     public String getThongTin(){
         return String.format("%s(%.2f,%.2f)",this.name,this.x,this.y);
     }
+
+    @Override
+    public String toString(){
+        return String.format("%s(%.2f,%.2f)",this.name,this.x,this.y);
+    }
 }
