@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="839cb7c6-8b56-42a3-842c-30dc3150392f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/module02/Bai01/ToaDo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/module02/Bai01/ToaDo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/module02/Bai01/testToaDo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/module02/Bai01/TestToaDo.java" afterDir="false" />
-    </list>
+    <list default="true" id="839cb7c6-8b56-42a3-842c-30dc3150392f" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -48,7 +45,7 @@
     "Application.testDiemSinhVien.executor": "Run",
     "Application.testToaDo.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "laptop",
+    "git-widget-placeholder": "desktop",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "D:/Study/OOP/ThucHanh/To Thanh Hau",
     "node.js.detected.package.eslint": "true",
@@ -158,6 +155,7 @@
       <workItem from="1724221454709" duration="29000" />
       <workItem from="1724221598571" duration="5566000" />
       <workItem from="1724824607750" duration="7440000" />
+      <workItem from="1726639650703" duration="377000" />
     </task>
     <servers />
   </component>
