@@ -2,3 +2,6 @@
 *.zip
 *.rar
 *.exe
+
+#ignore dir
+/LT
