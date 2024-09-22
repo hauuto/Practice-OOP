@@ -17,11 +17,7 @@ public abstract class Sach {
         setNhaXuatBan(nhaXuatBan);
     }
     public Sach(){
-        setMaSach("");
-        setNgayNhap(LocalDate.now());
-        setDonGia(0.0d);
-        setSoLuong(0);
-        setNhaXuatBan("");
+        this("xxx", LocalDate.now(),0,0,"xxx");
     }
 
     public String getMaSach() {
