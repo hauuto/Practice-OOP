@@ -1,4 +1,4 @@
-# Practical-OOP
+# Practice-OOP
 > A place to save code learn from OOP Course (IUH)
 
 **Number:** *11*
