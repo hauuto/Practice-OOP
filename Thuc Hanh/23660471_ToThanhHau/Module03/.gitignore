@@ -14,10 +14,6 @@ out/
 bin/
 !**/src/main/**/bin/
 !**/src/test/**/bin/
-#ignore extention file
-*.zip
-*.rar
-*.exe
 
 ### NetBeans ###
 /nbproject/private/
@@ -31,11 +27,3 @@ bin/
 
 ### Mac OS ###
 .DS_Store
-
-### .idea/ ###
-/.idea
-
-### .iml ###
-*.iml
-#ignore dir
-/LT
