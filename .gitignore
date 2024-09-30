@@ -14,10 +14,7 @@ out/
 bin/
 !**/src/main/**/bin/
 !**/src/test/**/bin/
-#ignore extention file
-*.zip
-*.rar
-*.exe
+
 
 ### NetBeans ###
 /nbproject/private/
@@ -37,5 +34,8 @@ bin/
 
 ### .iml ###
 *.iml
-#ignore dir
-/LT
+
+#ignore extention file
+*.zip
+*.rar
+*.exe
