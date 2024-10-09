@@ -7,6 +7,9 @@
 
 package iuh.fit.bai08;
 
+import java.text.NumberFormat;
+import java.util.Locale;
+
 /**
  * @description:
  * @author: To Thanh Hau
@@ -23,7 +26,7 @@ public class Account {
 
     //constructors
     public Account(){
-        this(0, "", 0);
+        this(000000, "chưa xác định", 50000);
     }
     public Account(long accountNumber, String name, double balance){
         setAccountNumber(accountNumber);
@@ -43,7 +46,11 @@ public class Account {
     }
 
     public void setAccountNumber(long accountNumber) {
-        this.accountNumber = accountNumber;
+        if (accountNumber < 0){
+            this.accountNumber = 0;
+        } else {
+            this.accountNumber = accountNumber;
+        }
     }
 
     public String getName() {
@@ -51,7 +58,11 @@ public class Account {
     }
 
     public void setName(String name) {
-        this.name = name;
+        if (name.trim().equalsIgnoreCase("") || name == null){
+            this.name = "chưa xác định";
+        } else {
+            this.name = name;
+        }
     }
 
     public double getBalance() {
@@ -59,10 +70,58 @@ public class Account {
     }
 
     public void setBalance(double balance) {
-        this.balance = balance;
+        if (balance < 50000){
+            this.balance = 50000;
+        } else {
+            this.balance = balance;
+        }
     }
 
     public double getRATE() {
         return RATE;
+    }
+
+    //methods
+
+    public boolean deposit(double amount){
+        if (amount >0){
+            balance += amount;
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    public boolean withdraw(double amount, double fee){
+        if (amount >0 && amount + fee <= balance){
+            balance = balance - amount - fee;
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    public void addInterest(){
+        balance = balance + balance * RATE;
+    }
+
+    public boolean tranfer(Account acc2, double amount){
+        if (amount >0 && amount <= balance){
+            this.balance = this.balance - amount;
+            acc2.balance = acc2.balance + amount;
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+
+    //money format
+    Locale local = new Locale("vi", "VN");
+    NumberFormat formatter = NumberFormat.getCurrencyInstance(local);
+
+    @Override
+    public String toString(){
+        return String.format("%-20d %-20s %-20s %-20s", accountNumber, name, formatter.format(balance), formatter.format(balance * RATE));
     }
 }
