@@ -46,4 +46,8 @@ public class GiaoDichTienTe extends GiaoDich{
                 return 0;
         }
     }
+
+    public String toString(){
+        return String.format("%10s %15s %15s %15s %15s %15s %15s", this.maGiaoDich, this.ngayGiaoDich, this.donGia, this.soLuong, this.tiGia, this.loaiTien, this.getThanhTien());
+    }
 }

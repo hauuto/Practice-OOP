@@ -26,4 +26,8 @@ public class GiaoDichVang extends GiaoDich{
     public double getThanhTien(){
         return this.soLuong * this.donGia;
     }
+
+    public String toString(){
+        return String.format("%10s %15s %15s %15s %15s %15s", this.maGiaoDich, this.ngayGiaoDich, this.donGia, this.soLuong, this.loaiVang, this.getThanhTien());
+    }
 }

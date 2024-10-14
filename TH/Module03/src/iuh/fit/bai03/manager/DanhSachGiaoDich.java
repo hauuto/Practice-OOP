@@ -5,49 +5,91 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class DanhSachGiaoDich implements iGiaoDich {
+public class DanhSachGiaoDich implements iGiaoDich{
+
     private List<GiaoDich> danhSachGiaoDich;
 
-    public DanhSachGiaoDich() {
+    public DanhSachGiaoDich(){
         danhSachGiaoDich = new ArrayList<>();
     }
 
-
-
-    //getters and setters
     public List<GiaoDich> getDanhSachGiaoDich() {
         return danhSachGiaoDich;
     }
 
-    public List<GiaoDich> getDanhSachGiaoDichTheoLoai(String loaiGiaoDich) {
-        return danhSachGiaoDich.stream()
-                .filter(gd -> gd.getClass().getSimpleName().equalsIgnoreCase(loaiGiaoDich))
-                .collect(Collectors.toList());
+    public List<GiaoDich> getDanhSachGiaoDichVang(){
+        return danhSachGiaoDich.stream().filter(gd -> gd instanceof GiaoDichVang).collect(Collectors.toList());
+    }
+
+    public List<GiaoDich> getDanhSachGiaoDichTienTe(){
+        return danhSachGiaoDich.stream().filter(gd -> gd instanceof GiaoDichTienTe).collect(Collectors.toList());
+    }
+
+
+    @Override
+    public boolean themGiaoDich(GiaoDich gd) {
+        return danhSachGiaoDich.add(gd);
     }
 
     @Override
-    public int soLuongGiaoDichTheoLoai(String loaiGiaoDich) {
-        return (int) danhSachGiaoDich.stream()
-                .filter(gd -> gd.getClass().getSimpleName().equalsIgnoreCase(loaiGiaoDich))
-                .count();
+    public boolean xoaGiaoDich(GiaoDich gd) {
+        return danhSachGiaoDich.remove(gd);
     }
-    public double trungBinhThanhTienTheoLoai(String loaiGiaoDich) {
-        List<GiaoDich> ds = getDanhSachGiaoDichTheoLoai(loaiGiaoDich);
-        if(ds.size() == 0)
-            return 0;
-        return ds.stream()
-                .mapToDouble(loaiGiaoDich.equalsIgnoreCase("GiaoDichVang") ? GiaoDichVang::thanhTien : GiaoDichTienTe::thanhTien)
-                .average()
-                .getAsDouble();
-    }
-    public boolean themGiaoDich(GiaoDich gd) {
-        if(gd == null)
-            return false;
 
-        if(danhSachGiaoDich.contains(gd))
-            return false;
-
-        danhSachGiaoDich.add(gd);
-        return true;
+    @Override
+    public boolean suaGiaoDich(GiaoDich gd) {
+        for (GiaoDich giaodich:danhSachGiaoDich){
+            if (giaodich.getMaGiaoDich().equalsIgnoreCase(gd.getMaGiaoDich())){
+                giaodich = gd;
+                return true;
+            }
+        }
+        return false;
     }
+
+    @Override
+    public GiaoDich timGiaoDich(String maGiaoDich) {
+        for (GiaoDich giaodich:danhSachGiaoDich){
+            if (giaodich.getMaGiaoDich().equalsIgnoreCase(maGiaoDich)){
+                return giaodich;
+            }
+        }
+        return null;
+    }
+
+    @Override
+    public void tongGiaoDichCacLoai() {
+        int tongGiaoDichVang = 0;
+        int tongGiaoDichTienTe = 0;
+        for (GiaoDich gd:danhSachGiaoDich){
+            if (gd instanceof GiaoDichVang){
+                tongGiaoDichVang++;
+            }else if (gd instanceof GiaoDichTienTe){
+                tongGiaoDichTienTe++;
+            }
+        }
+        System.out.println("Tong so giao dich vang: "+tongGiaoDichVang);
+        System.out.println("Tong so giao dich tien te: "+tongGiaoDichTienTe);
+    }
+
+    @Override
+    public double trungBinhThanhTien() {
+        double tongThanhTien = 0;
+        for (GiaoDich gd:danhSachGiaoDich){
+            if (gd instanceof GiaoDichTienTe){
+                tongThanhTien += gd.getThanhTien();
+            }
+        }
+        return tongThanhTien;
+    }
+
+    @Override
+    public void giaoDichCoThanhTienHon1Ty() {
+        for (GiaoDich gd:danhSachGiaoDich){
+            if (gd.getThanhTien()>1000000000){
+                System.out.println(gd);
+            }
+        }
+    }
+
 }
